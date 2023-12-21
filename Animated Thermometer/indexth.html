@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Animated Thermometer</title>
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+	<style type="text/css">
+
+		body{
+			padding: 0;
+			margin: 0;
+			box-sizing: border-box;
+			background-color:blueviolet;
+
+		}
+
+		.container{
+			width: 800px;
+			height:420px;
+			border: 1px solid black;
+			border-radius: 10px;
+			margin: 100px 0px 0px 350px;
+			background-color: #80e5ff;
+		}
+
+		#sent{
+			font-family: sans-serif;
+			font-size: 100px;
+			color: orangered;
+			font-weight: bolder;
+			margin: -180px 0px 0px 50px;
+			letter-spacing: 3px;
+			text-shadow:2px 2px 2px #FF0000;
+		}
+
+		#sent1{
+			font-family: sans-serif;
+			font-size: 100px;
+			color: orangered;
+			font-weight: bolder;
+			margin: 50px 0px 0px 20px;
+			text-shadow:2px 2px 2px #FF0000;
+		}
+
+		.fa{
+			margin: 100px 0px 0px 650px;
+			font-size: 200px;
+			font-weight: none;
+		}
+
+		#button{
+			font-family:Buxton Sketch;
+			font-size: 30px;
+			padding: 15px;
+			font-weight: bold;
+			background-color: palegreen;
+			border: 2px solid red;
+			border-radius: 20px;
+			margin: 50px 0px 0px 600px;
+		}	
+
+		#button:hover{
+			font-size: 35px;
+			border: 3px solid green;
+			text-shadow:2px 2px 2px green ;
+		}
+		a{
+			color: black;
+			text-decoration: none;
+		}
+	</style>
+
+
+</head>
+<body>
+
+	<div class="container">
+		<div class="fa" id="thermo"></div>
+		<p id="sent">I am </p>
+		<p id="sent1">Thermometer</p> 
+	</div>
+
+	<button id="button"> <a href="calculation.html" target="_blank"> Get Started </a></button>
+
+<script type="text/javascript">
+	animation(); 
+	// First Time calling the function and afterwards calling using setInterval Function 
+
+	function animation()
+	{
+		const element = document.getElementById('thermo');
+		element.innerHTML="&#xf2cb";
+		element.style.color="grey"
+		element.style.opacity=0.8
+
+		setTimeout ( ()=> {
+			element.innerHTML="&#xf2ca";
+			element.style.color="red"
+			element.style.opacity=0.8
+		},1000);
+
+		setTimeout ( ()=> {
+			element.innerHTML="&#xf2c9";
+			element.style.color="orangered"
+			element.style.opacity=0.8
+		},2000);
+
+		setTimeout ( ()=> {
+			element.innerHTML="&#xf2c8";
+			element.style.color="yellow"
+			element.style.opacity=0.7
+
+		},3000);
+
+		setTimeout ( ()=> {
+			element.innerHTML="&#xf2c7";
+			element.style.color="greenyellow"
+			element.style.opacity=0.8
+		},4000);
+
+		setTimeout ( ()=> {
+			element.innerHTML="&#xf2ca";
+			element.style.color="#00141a"
+			element.style.opacity=0.4
+		},5000);
+	}
+
+	setInterval(animation , 5000)
+	
+</script>
+
+</body>
+</html>

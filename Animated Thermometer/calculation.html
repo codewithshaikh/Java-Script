@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Calculation</title>
+
+	<style type="text/css">
+
+		body{
+			margin: 0px;
+			padding: 0px;
+			box-sizing: border-box;
+			background-color: #f3f584;
+		}
+
+		.container{
+			margin: 250px 0px 0px 420px;
+			width:650px;
+			height: 350px;
+			background-color: #f7b7ef;
+			border: 1px solid black;
+		}
+
+		#convert{
+			margin: 25px 0px 0px 50px;
+			font-family: serif;
+			font-size: 22px;
+			font-weight: bolder;
+			color: red;
+		}
+
+		#opt{
+			padding: 10px;
+			border-radius: 10px;
+			color: blue;
+			margin: 30px 0px 0px 185px;
+		}
+
+		#input1{
+			padding: 5px;
+			border-radius: 10px;
+			margin: 15px 0px 0px 0px;
+			width: 155px;
+		}
+
+		p{
+			font-size: 18px;
+			font-family: monospace;
+			font-weight: bolder;
+			margin: 15px 0px 0px 50px;
+		}
+
+		#button{
+			padding: 15px;
+			color: white;
+			font-size: 15px;
+			background-color: black;
+			font-family: monospace;
+			margin: 10px 0px 0px 220px;
+			border-radius: 20px;
+			border: none;
+		}
+
+		hello{
+			font-size: 18px;
+			font-family: monospace;
+			font-weight: bolder;
+			margin: 15px 0px 0px 0px;
+		
+		}
+
+	</style>
+</head>
+<body>
+
+	<div class="container">
+		<p id="convert">Please Select Conversion and Enter the Temperature Value </p>
+		<form name="frm">
+		
+					<select id="opt" name="opt" >
+						<option value="0">--SELECT--</option>
+						<option value="1">1.Celsius to Farenheit </option>
+						<option value="2">2.Farenheit to Celsius </option>
+					</select>
+					<p >Enter Value : <input type="text" name="t1" id="input1"></p><br> 
+					<input type="button" value="Calculate" onclick="func()" id="button"><br>
+					<p> Your Result :
+						<hello id="print"></hello>
+					</p>
+		</form>
+	</div>	
+
+	<script type="text/javascript">
+		 function func()
+		 {
+		 	var val = parseInt(document.frm.opt.value);
+
+		 	if(val=="0")
+		 	{
+		 		alert("Please Select an Option");
+		 		return false;
+
+		 	}
+		 	else if(val=="1")
+		 	{
+		 		var c = eval(document.frm.t1.value);
+			 	var f =parseFloat(( c*1.8 )+32);
+			 	document.getElementById("print").innerHTML =Math.round(f).toFixed(2) + " Farenheit" ;
+		 	}
+		 	else
+		 	{
+		 		var f = eval(document.frm.t1.value);
+		 		var c =parseFloat((f-32 )/1.8);
+		 		document.getElementById("print").innerHTML = Math.round(c).toFixed(2) + " Celsius" ;   // Takes 2 decimals after point numbers
+		 		
+		 	}
+		 }
+	
+	</script>
+</body>
+</html>
