@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Age Calculator</title>
+
+	<style type="text/css">
+			body{
+			padding: 0px;
+			margin: 0px;
+			box-sizing: border-box;
+			justify-content: center;
+		}
+
+		.container{
+			margin: 200px 0px 0px 500px;
+		    box-shadow: 0 0 4px 1px rgb(179, 169, 169);
+		    width: 400px;
+		    height: 350px;
+		    border-radius: 10px;
+		    display: flex;
+		    /* justify-content: center; */
+		    align-items: center;  
+		    flex-direction: column;  
+		}
+
+		.container p{
+			color: green;
+			font-size: 25px;
+			margin: 18px;
+			font-family:  Cambria;
+		}
+
+		.date-container label{
+    		font-size: 15px;
+    		font-weight: bold;
+   			margin-right:10px;
+   			font-family: Segoe Print;
+   		}
+
+   		#birthDate , #currentDate{
+   			width: 140px;
+    		height: 40px;
+   			color: brown;
+   			font-size: 20px;
+   			border-radius: 10px;
+   			border: none;
+   			box-shadow: 0 0 3px 1px rgb(210, 197, 197);
+   		}
+
+   		#calculateBtn{
+   			font-family: cursive;
+   			 width: 105px;
+    		height: 55px;
+   			color: green;
+   			font-size: 18px;
+   			padding: 12px;
+   			margin: 15px 0px 0px 0px;
+   			border-radius: 15px;
+   			border: none;
+   			cursor: pointer;
+   			box-shadow: 2px 2px 2px rgb(56, 84, 56);
+   			transition: all 0.1s;
+   		}
+
+   		#error{
+   			color: green;
+   			font-size: 22px;
+   			margin: 15px 0px 0px 0px ;
+   			text-shadow: 1px 0px 4px green;
+   		}
+
+   		#calculateBtn:hover{
+   			box-shadow: 2px 2px 2px rgb(155, 190, 100);
+   		}
+	</style>
+
+	
+
+</head>
+<body>
+
+	<div class="container">
+		<p>Age Calculator</p>
+		<div class="date-container"><br>
+			<label>Date of Birth : </label>
+            <input type="date" name="birthDate" id="birthDate" required>
+		</div>
+
+		<div class="date-container"><br><br>
+			<label>Current Date : </label>
+			<input type="date" name="currentDate" id="currentDate" required>
+		</div>
+
+		<input type="button" value="Calculate" id="calculateBtn">
+		<p id="error"></p>
+
+		<script type="text/javascript">
+		let dob = document.getElementById("birthDate");
+		console.log(dob);
+		let current = document.getElementById("currentDate");
+		console.log(current);
+		let print = document.getElementById("error");
+		console.log(print);
+		document.getElementById("calculateBtn").addEventListener("click",()=>{
+    if(dob.value=="" || current.value==""){
+        print.innerHTML = "Please select Date";
+    }else{
+        calculate(dob.value,current.value);
+    }
+    
+});
+
+
+
+
+		function calculate(start , end )
+		{
+			// example : start = 2023-12-18   i.e year-month-day
+			let dobYear = parseInt(start.substring(0,4));   // extracting year
+			let dobMonth = parseInt(start.substring(5,7));
+			let dobDay = parseInt(start.substring(8,10));
+
+			let currentYear = parseInt(end.substring(0,4));   // extracting year
+			let currentMonth = parseInt(end.substring(5,7));
+			let currentDay = parseInt(end.substring(8,10));
+
+			// Year Difference
+			let Yeardiff= dobYear - currentYear ;
+
+			// Month Difference
+			let Monthdiff ;
+			if(currentMonth >= dobMonth)
+			{
+				Monthdiff= currentMonth- dobMonth;
+			}
+			else 
+			{
+				Yeardiff -- ;
+				Monthdiff = 12 + currentMonth- dobMonth;
+			}
+
+
+			// Days Difference
+			let Daydiff;
+			if(currentDay >= dobDay)
+			{
+				Daydiff = currentDay - dobDay ; 
+			}
+			else 
+			{
+				Monthdiff--;
+				noOfDaysInDOB = daysInMonth(dobMonth,dobYear);
+				Daydiff = noOfDaysInDOB+currentDay-dobDay; 
+			}
+
+			 //case when monthAgeDiff goes negative
+		        if(Monthdiff<0){
+		            Monthdiff=11;
+		            Yeardiff--;
+		        }
+	 						
+			print.innerHTML = Yeardiff + " Years " + Monthdiff +" Months " + Daydiff +" Days."
+		}	
+
+		function daysInMonth (month, year) {
+    return new Date(year, month, 0).getDate();   // Returns the Day of the Date as a Number 
+}
+	</script>
+
+</body>
+</html>
