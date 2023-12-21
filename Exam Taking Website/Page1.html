@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+
+	<!-- Bootsrap CDN Link -->
+
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" 
+		integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" 
+		integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+
+	<!-- Custom CSS Link  -->
+	<link rel="stylesheet" type="text/css" href="Page1-Style.css">
+
+</head>
+<body>
+	
+	<div class="background" id="main">
+
+			<div class="inner1" id="outer1">
+				<p class="text-center mt-2  text-body-emphasis font-monospace fw-bold fs-1">WELCOME TO ONLINE TEST</p>
+				<p class="fs-5 textCursive text-center  text-primary">Having Application Number , Click on Login</p>
+				<p class="fs-5 textCursive text-center ">Not Having Application Number</p>
+				<p class="fs-5 textCursive text-center ">Click on Registration</p>
+			</div>
+
+			<div class="inner2 my-5">
+				<a class="point btn btn-outline-primary mx-md-3 mx-sm-0 my-2 " id="Login_Page">LOGIN</a>
+				<a class="point btn btn-outline-danger mx-md-3 mx-sm-0 my-2 " id="Registration_Page">REGISTRATION</a>
+			</div>
+	</div>
+
+	<div class="container log ms-0" id="login">
+		<form class="row  needs-validation" novalidate>
+
+			<div class="col-md-12 col-sm-12  mt-3">
+				<h1 class="text-success h4 " style="font-family: cursive; margin-left: 33%;">Sign Up</h1>
+			</div>
+
+			<div class="col-md-10 col-sm-10 ms-3 my-3">
+			  <label class="label-frm"> Email ID: </label>
+			  <input type="email" class="form-control in" id="l1"  required  placeholder="  Enter Email">
+			  <div class="invalid-feedback ms-3">
+			      Please Enter valid Email
+			  </div>
+			</div>
+
+			<div class="col-md-10  col-sm-10 ms-3 my-3">
+			  	<label class="label-frm">Application Number : </label>
+			    <input type="number" class="form-control in" id="l2" required placeholder="  Enter Application no" max="999999" >
+			    <div class="invalid-feedback ms-3">
+			      Please provide a valid Application number
+			    </div>
+			</div>
+
+			<div class="col-md-10  col-sm-10  ms-3 my-3">
+			    <label  class="label-frm">Password : </label>
+			    <input type="password" class="form-control in" id="l3" required placeholder="  Enter Password">
+			    <div class="invalid-feedback ms-3">
+			        Please type a valid Password
+			    </div>
+			</div>
+
+			
+			  
+			<div class="col-12  my-3 w-50 ms-2">
+			    <button class="btn btn-outline-primary text-monospace btn-marginL" type="submit" onclick="submitL()">SUBMIT</button>
+			</div>
+
+			<div class="my-2 w-100 ms-3">
+			  	<h5 class="text-success ms-1 h3" style="font-family:serif;">Don't have a <a class="btn btn-outline-danger btn-sm mx-2 textCursive"  id="returnL">Application number ?</a></h5>
+			</div>
+		  
+		</form>
+	</div>
+
+	
+	<div class="container reg" id="regis">
+		<form class="row  needs-validation" novalidate>
+
+			<div class="col-md-4 col-4 my-1 offset-3" >
+				<h5 class="text-danger-emphasis h2">REGISTRATION</h5>
+			</div>
+
+			  <div class="col-md-12 col-12 0 mx-2 mt-0">
+			    <label class="label-frm1">Name of Certificate :</label>
+			    <input type="text" class="form-control in" id="r1" required placeholder="  Student's Name">
+			    <div class="invalid-feedback ms-3 ms-3">
+			      Please Enter Name
+			    </div>
+			  </div>
+
+			  <div class="col-md-12 col-12 0 mx-2">
+			    <label class="label-frm1">Email ID: </label>
+			    <input type="email" class="form-control in" id="r2"  required  placeholder="  Student's Email">
+			    <div class="invalid-feedback ms-3">
+			      Please Enter valid Email
+			    </div>
+			  </div>
+
+			  <div class="col-md-12  col-12 0 mx-2">
+			    <label  class="label-frm1">Password : </label>
+			      <input type="password" class="form-control in" id="r3"  required placeholder="  Create Password">
+			      <div class="invalid-feedback ms-3">
+			        Please choose a Password
+			      </div>
+			    </div>
+			 
+			  <div class="col-md-12  col-12 0 mx-2">
+			  	<label class="label-frm1"> Mobile Number : </label>
+			    <input type="number" class="form-control in" id="r4" required placeholder="   Mobile No" max="9999999999">
+			    <div class="invalid-feedback ms-3">
+			      Please provide a valid Mobile number
+			    </div>
+			  </div>
+
+			  <div class="col-md-12 col-12 0 mx-2">
+			  	<p class="label-frm1">Select Language: </p>
+			  	<select class="form-select textCursive in text-center" id="r5" required >
+				  		<option selected disabled value="" > -- SELECT --</option>
+						<option value="1" class="text-primary h6"> C LANGUAGE</option>
+						<option value="2" class="text-success h6"> C++ LANGUAGE </option>
+						<option value="3" class="text-danger h6"> JAVA LANGUAGE</option>
+				</select>
+				<div class="invalid-feedback ms-3">
+			      Please select a Valid Exam Language
+			    </div>
+				</div>
+
+			   <div class="col-12 my-2 mx-3 mt-1">
+			    <div class="form-check mx-1">
+			      <input class="form-check-input" type="checkbox"  id="checkbox" required>
+			      <label class="label-frm1 mt-0 mx-0">
+			        Agree to terms and conditions
+			      </label>
+			      <div class="invalid-feedback mx-0 mt-0">
+			        You must agree before submitting.
+			      </div>
+			    </div>
+			  </div>
+			  
+			  <div class="col-12 col-md-12 0 my-3 offset-4">
+			    <button class="btn btn-outline-success textCursive btn-lg" type="submit" onclick="submitR()" id="modal-btn">REGISTER </button>
+			  </div>
+
+
+			  <div class="my-2 w-100 ms-3">
+			  	<h5 class="text-danger ms-5 " style="font-family:serif;">I am Having a <a class="btn btn-outline-dark btn-sm mx-2 textCursive" id="returnR">Application number </a></h5>
+			  </div>
+		</form>
+	</div>
+
+	<!-- Javascript Custom Link -->
+
+	<script src="Page1-js.js"></script>
+	
+</body>
+</html>
