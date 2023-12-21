@@ -1,0 +1,412 @@
+*{
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+
+		body{
+			background: #a3a3c2;
+			overflow: hidden;
+		}
+		
+
+		.mobile{
+			width: 370px;
+			height: 670px;
+			border: 1px solid black;
+			border-width: 16px;
+			margin-top: 50px;
+			background:  #ffffff;
+			border-radius: 45px;
+			
+			user-select: none;
+		}
+
+		
+
+		.camera{
+			z-index: 1;
+			height: 35px;
+			width: 40px;
+			border-radius: 30px;
+			background-color:black;
+			color: gray;
+			padding-top: 7px;
+			margin: -13px 0px 0px 0px;	
+		}
+
+		.cam1{
+			border-radius: 50%;
+			height: 20px;
+			width: 20px;
+			margin: 2px 0px 0px 0px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		.cam2{
+			width: 15px;
+			height: 15px;
+			border-radius: 50%;
+			border: 2px solid white;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		#dot{
+			border-radius: 50%;
+			background-color: black;
+			width:5px;
+			height:5px;
+			border: 1px soild black;
+		}
+		.header{
+			font-size: 32px;
+			text-align: left;
+			margin-left: 20px;
+			margin-top: 2px;
+			font-family: 'Script MT',Cursive; 
+			display: flex;
+			background: none;
+		}
+
+		.img1{
+			margin: 6px 0px 0px 60px;
+			width: 30px;
+			height: 30px;
+		}
+		.img2{
+			margin: 6px 0px 0px 30px;
+			width: 32px;
+			height: 33px;
+		}
+		
+
+		.scroll-box{
+			margin: 10px 10px 0px 10px;
+			background: white;
+			display: flex;
+			overflow-x: scroll;
+		}
+
+		.scroll-box::-webkit-scrollbar {
+			height: 8px; 
+			background-color: #e0e0d1;
+			margin: 10px 3px 5px 3px;
+		}
+
+		.video-box::-webkit-scrollbar {
+			display: none;
+		}
+		
+		.backs{
+			margin: 5px 4px 2px 5px;
+		}
+		.prof-img1{
+			border-radius: 50%;
+			width: 80px;
+			height: 80px;
+			margin: 10px 10px 0px 10px;
+			border: 2px solid pink;
+		}
+
+		.spans1{
+			margin: 7px 0px 10px 0px;
+			font-size: 16px;
+			font-family:cursive;
+		}
+
+		#line{
+			margin: 10px 0px 5px 0px;
+			height: 2px;
+			width: 97%;
+			background-color: black;
+			box-shadow: 3px 3px 6px black;
+		}
+
+		.inner1{
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+
+		.prof-img2{
+			border-radius: 50%;
+			width: 60px;
+			height: 60px;
+			margin: 10px 10px 0px 10px;
+			border: 2px solid pink;
+		}
+		.spans1{
+			font-size: 15px;
+			font-family:cursive;
+		}
+
+		.video-box{
+			margin: 10px 5px 0px 1px;
+			width: 335px;
+			height:345px;
+			background-color:white;
+			overflow-y: scroll;
+		}
+
+		.post{
+			margin: 5px 2px 0px 3px;
+			width: 330px;
+			height:355px;
+		}
+
+
+		.stories{
+			border-radius: 50px;
+			border: 3px solid grey;
+			margin-top: 3px;
+			margin-left: 5px;
+			width: 50px;
+			height: 50px;
+		}
+
+		.fonts{
+			display: flex;
+			text-align: left;
+			height: 38px;
+			font-size: 18px;
+			margin: 8px 0px 0px 8px;
+			padding: 0px 5px;
+		}
+
+		.font1{
+			margin-right: 12px;
+			margin-top: 3px;
+		}
+
+		.font2{
+			cursor: pointer;
+			margin-right: 12px
+		}
+
+		.font3{
+			margin-right: 12px
+		}
+
+		.font4{
+			margin-left: 180px
+		}
+
+		.inner1{
+			display: flex;
+		}
+
+		.inner2{
+			background-color: black;
+			text-align:center;
+		}
+
+		.inner3{
+			text-align: left;
+			margin-top: -5px;
+			margin-left: 7px;
+		}
+		.likes{
+			font-size: 17px;
+			font-family: monospace;
+			margin: 0px 5px 5px 5px;
+		}
+
+		.diff{
+			height: 5px;
+			width: 100%;
+			background:linear-gradient( red ,  orange , yellow);
+		}
+
+		.red{
+			color: red;
+			font-size:25px ;
+		}
+
+
+		.modal{
+		  	
+		display: none;
+		width: 335px;
+		height:530px;
+		margin: -550px 0px 0px 0px;
+		background-color: gainsboro;
+		border: none;
+		position: relative;
+		z-index: 3;
+		border-radius: 30px;
+		animation-name: fadeIn;
+		animation-duration: 0.9s;
+		}
+
+
+		.modal-header 
+		{
+		  
+		  margin: 0px 0px 0px 0.5px;
+		  display: flex;
+		  align-items: center;
+		  justify-content: center;
+		  width: 329px;
+		  height: 60px;
+		  border-bottom: 1px solid grey;
+		  
+		}
+
+		.comment-header{
+		    font-family:cursive;
+		    
+		}
+
+		/* The Close Button */
+		.close {
+		  user-select: none;
+		  color:#717871;
+		  font-size: 40px;
+		  margin-left: 40%;
+		  font-weight: bolder;
+		}
+
+		.close:hover, .close:focus 
+		{
+		  color:black;
+		  font-size: 45px;
+		  text-decoration: none;
+		  cursor: pointer;
+		}
+
+		.modal-body {
+		  width: 330px;
+		  height:380px;
+		   background-color: #d0d9d9;
+		   overflow-y: scroll;
+		   z-index: 4;
+		}
+
+		.modal-body::-webkit-scrollbar {
+		      display: none;
+		    }
+
+		.modal-footer{
+		  margin: 5px 0px 0px 0px;
+		  height: 80px;
+		}
+
+		  .emoji-box{
+		    user-select: none;
+		    margin: 5px 0px 0px 0px;
+		      background: white;
+		      height: 30px;
+		      display: flex;
+		      overflow-x: scroll;
+		  }
+
+		  .emoji-box::-webkit-scrollbar {
+		      height: 3px; 
+		      background-color: #666966;
+		      margin: 15px 3px 5px 3px;
+		    }
+
+		  .emojis{
+		     margin: 2px 5px 0px 5px;
+		    font-size: 13px;
+		  }
+
+		  .wrap{
+		  	height: 45px;
+		  	margin: 5px 0px 0px 3px;
+		  	position: absolute;
+		  	background-color: white;
+		  	width: 98%;
+		  	border-radius: 0px 0px 16px 16px;
+
+		  }
+
+		  .input-comment{
+			  padding: 6px 5px;
+			  width: 70%;
+			  font-size: 15px;
+			  border: 0.5px solid coral;
+			  position: relative;
+			  right: 5px;
+			  border-radius: 16px 16px 16px 16px;
+		  }
+
+		@keyframes fadeIn {
+		 	0%{
+		  		opacity: 0 ; 
+		  		bottom: -100px;
+		  		z-index: 0;
+		  	}
+
+		  	30%{
+		  		opacity: 0;
+		  		bottom: -70px;
+		  	} 
+
+		  	70%{
+		  		opacity: 0;
+		  		bottom: -20pz;
+		  	}
+
+		  	90%{
+		  		opacity: 0.2;
+		  		bottom: -10px;
+		  	}
+
+		  	95%{
+		  		opacity: 0.6;
+		  	}
+		 
+		  100%{
+			  	opacity: 1 ; 
+			  	bottom: 0px;
+				z-index: 2;
+			}
+		}
+
+
+		  .sends{
+		  	width: 30px;
+		  	height: 30px;
+		  	position: relative;
+		  	left: 13px;
+		  	top: 9px;
+		  }
+
+		  .classes_div{
+		  	background-color:floralwhite ;
+		  	width: 100%;
+		  	height: 100%;
+		  	padding: 3% 5%;
+		  	margin: 3% 0% 0% 0%;
+		  	text-align: left;
+		  	text-align-last: left;
+		  	border-radius: 10px;
+		  	display: block;
+		  }
+
+		  .classes_div_p{
+		  	text-align: left;
+		  	color: black;
+		  	width: 100%;
+		  	margin: 0% 0% 4% -2%;
+		  	font-family:Buxton Sketch ;
+		  	letter-spacing: 1px;
+		  	word-spacing: 1px;
+		  	font-size: 18px;
+		  	font-weight: 500;
+		  }
+
+		  .spanning{
+		  	width: 100%;
+		  	color: gray;
+		  	font-family: monospace;
+		  	letter-spacing: 1px;
+		  	word-spacing: 1px;
+		  	margin: 0% 0% 4% -2%;
+		  	font-size: 15px;
+		  }
