@@ -1,0 +1,27 @@
+body
+{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+}
+
+div
+{
+	border: 2px solid ;
+	border-radius: 20px;
+	padding: 30px;
+}
+
+p
+{
+	font-size: 18px;
+	font-weight: bold;
+}
+
+button
+{
+	padding: 5px;
+	border: 2px solid hotpink;
+	border-radius: 6px;
+}
