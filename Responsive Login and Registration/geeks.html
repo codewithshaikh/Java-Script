@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>RESPONSIVE FORM</title>
+
+
+	<style type="text/css">
+
+		body{
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+			background-image: url('backkk.jpg')
+		}
+
+		.back{
+			width: 900px;
+			height: 200px;
+			margin: 250px 0px 0px 250px;
+			text-align: center;	
+			display: block;		
+		}
+
+		.back h1{
+			color: greenyellow;
+			font-size: 38px;
+			text-shadow: 1px 3px darkred;
+            font-weight: bold;
+            user-select: none;
+		}
+
+		.back button{
+			background-color:#1E1A1A;
+			padding: 15px;
+			color: white;
+			font-size: 20px;
+			font-family: monospace;
+			font-weight: bold;
+			border-radius: 14px;
+			margin: 15px 0px 0px 35px;
+
+		}
+
+		.back button:hover{
+			cursor: pointer;
+			background-color: white;
+			color: black;
+			box-shadow: 2px 2px 1px white;
+		}
+
+		/* For Removing Arrow Spinners for Numbers in Input tag */
+		input::-webkit-outer-spin-button,
+		input::-webkit-inner-spin-button { 
+			-webkit-appearance: none;
+		}
+
+/* Login Form */
+
+.Log{
+	width: 450px;
+	height: 500px;
+	border: 1px solid red;
+	display: flex;
+	flex-direction: column;
+	margin: 150px 0px 0px 380px;
+	border-radius: 15px;
+	display: none;
+	background-color: #b8b894
+}		
+
+.Log h3{
+	font-size: 27px;
+	text-align: center;
+	margin-bottom: 5px;	
+}
+
+.h3img{
+	width:440px;
+	height: 40px;
+	text-align: center;
+	
+	border-radius: 15px;
+	border: none;
+	margin: -8px 0px 15px 6px;
+}
+
+.Log h3 img{
+	width: 23px;
+	height: 20px;
+	float: right;
+	margin: 2px 10px 0px 0px;
+}
+
+
+.Log h3 img:hover{
+	width: 25px;
+	height: 22px;
+}
+
+.Log label{
+	font-size: 20px;
+	font-family:cursive;
+	margin-top: 10px;
+	margin-left: 20px;
+	user-select: none;
+}
+
+.Log input{
+	padding: 8px ;
+	border: 0.5px solid black;
+	border-radius: 10px;
+	width: 380px;
+	margin: 10px 0px 0px 20px;
+}
+
+
+.Log button{
+	box-sizing: border-box;
+	font-size: 17px;
+	width: 180px;
+	padding: 10px;
+	color: white;
+	text-align: center;
+	border-radius: 7px;
+	border: 1px solid green;
+	background-color: green;
+	box-shadow: 1px 2px yellow;
+	margin: 10px 0px 0px 120px;
+	cursor: pointer;
+}
+
+.Or{
+	color:black;
+	font-size: 22px;
+	text-align: center;
+	margin: 7px 0px 0px 5px;
+}
+
+.Log span{
+	color: blue;
+	font-size: 18px;
+	margin: 20px 0px 0px 12px;
+}
+.Log span p{
+	color: red;
+	text-decoration: underline;
+	margin: -20px 0px 0px 260px;
+	font-size: 18px;
+ }
+
+
+.Reg{
+	width: 	700px;
+	height: 1250px;
+	border-radius: 15px;
+	border: 1px solid hotpink;
+	margin: 10px  0px 0px 320px;
+	background-color: #e0e0eb;
+	display: none;
+}
+
+.Reg h2{
+	text-align: center;
+	font-size: 25px;
+	font-family: sans-serif;
+	font-weight: bold;
+	letter-spacing:2px;
+	word-spacing: 2px;
+}
+
+.basic{
+	width:670px;
+	padding: 5px;
+	margin: 20px 0px 0px 10px;
+	border:none;
+	font-size: 18px;
+	font-family: monospace;
+	font-weight: bold;
+	text-align: center;
+	border-radius: 5px;
+	background-color: #c2c2d6;
+}
+
+.p1{
+	margin: 10px 0px -5px 40px;
+	font-size: 18px;
+	font-family: cursive;
+}
+
+.in1{
+	padding: 8px ;
+	border: 0.5px solid black;
+	border-radius: 10px;
+	width: 250px;
+	margin: 8px 0px 10px 30px;
+}
+
+.in2{
+	padding: 8px ;
+	border: 0.5px solid black;
+	border-radius: 10px;
+	width: 250px;
+	margin-left: 30px;
+	margin-bottom: 10px;
+}
+
+.lab1{
+	margin-left: 40px;
+	font-size: 15px;
+	color: red;
+}
+
+.lab2{
+	margin-left: 180px;
+	font-size: 18px;
+	color: green;;
+}
+
+.p2{
+	margin: -27px 0px 0px 300px;
+	font-size: 20px;
+	font-family: cursive;
+}
+
+
+
+
+.sel1{
+	padding: 3px;
+	font-size: 14px;
+	width: 190px;
+	border: 0.5px solid red;
+}
+
+.p3{
+	margin: 0px 0px 0px 40px;
+	font-size: 18px;
+	font-family: monospace;
+	font-weight: bold;
+}
+
+.p4{
+	margin: -22px 0px 0px 400px;
+	font-size: 18px;
+	font-family: monospace;
+	font-weight: bold;
+}
+
+.lab3{
+	margin-left: 40px;
+	font-size: 18px;
+	color: blue;
+}
+
+.p5{
+	margin: -20px 0px -15px 400px;
+	font-size: 18px;
+	font-family: monospace;
+	font-weight: bold;
+}
+
+.in3{
+	margin:5px 0px 0px 30px;
+}
+
+.in4{
+	margin: 0px 0px 0px 100px;
+}
+
+.radios{
+	display: inline-flex;
+}
+	
+.btns{
+	display: flex;
+}
+
+.btn1{
+	box-sizing: border-box;
+	font-size: 15px;
+	width: 150px;
+	padding: 6px;
+	color: white;
+	text-align: center;
+	border-radius: 5px;
+	border: 1px solid green;
+	background-color: green;
+	box-shadow: 1px 2px yellow;
+	margin: 15px 0px 0px 120px;
+	cursor: pointer;
+}
+
+	</style>
+</head>
+<body>
+	
+		<div id="Main" class="back">
+			<h1> Modal login and Registration Form</h1>
+			<button id="idddd" >Login</button>
+			<button id="regiss">Registration</button>	
+		</div>
+
+		<div class="Log" id="Login">
+			<form name="Lfrm" onsubmit="return ValidationL()">
+				<div class="h3img">
+				<h3>Login Form <img  id="CutL" src="cross.png"></h3><br>
+				</div>
+				<label>Email-Id : </label><br>
+				<input type="email" placeholder="Enter Email Id" name="L1"><br><br>
+				
+
+
+				<label>Application No : </label>
+				<input type="number" placeholder="Enter Application No" name="L2"><br><br>
+				
+
+
+				<label>Password : </label>
+				<input type="password" placeholder="Enter Password" name="L3"><br><br>
+				
+
+				<button id="Login-button" name="submit">Login In</button><br>
+				<p class="Or">-------------------------or-------------------------</p><br>
+				<span>Dont Have Application Number ?<p>Registration Sign Up</p></span>
+			</form>
+		</div>
+
+
+	 <div class="Reg" id="Registration">
+	 	<form name="Rfrm" onsubmit="return ValidationR()">
+			<h2>STUDENT REGISTRATION FORM</h2>
+
+			<div class="basic">Basic Information</div>
+
+			<p class="p1">Enter Student Name:<input class="in1" type="text" placeholder="Student Name" required name="R1"> </p>
+
+			<p class="p1">Enter Father Name : <input class="in1" type="text" placeholder="Father's Name" required name="R2"></p>
+			<p class="p1">Enter Mother Name :<input class="in1" type="text" placeholder="Mother's Name" required name="R3"></p>
+
+			<p class="p1"> Present Address :</p>
+			<input class="in1" type="text" name="" required placeholder="Address Line 1" name="R4">
+			<input class="in2" type="text" name="" placeholder="Address Line 2"><br>
+			<label class="lab1">Street Address line 1 * </label>
+			<label class="lab2">Street Address line 2 (Optional) </label><br><br>
+
+
+			<p class="p1">City: <input class="in3" type="text" required name="R5"> </p>
+			<p class="p2">Pin : <input  class="in3" type="number" required name="R6">  </p><br>
+			
+			<p class="p1">Select State : 
+					<select required class="sel1"> 
+						<option><b>Select Your State</b></option>
+						<option>Maharashtra</option>
+						<option>West Bengal</option>
+						<option>Gujrat</option>
+						<option>Rajasthan</option>
+						<option>Telengana</option>
+						<option>Delhi</option>
+						<option>Punjab</option>
+						<option>Tamil Nadu</option>
+						<option>Madhya Pradesh</option>
+						<option>Assam</option>
+						<option>Bihar</option>
+						<option>Uttar Pradesh</option>
+						<option>Mizoram</option>
+						<option>Kerela</option>
+						<option>Harayana</option>
+						<option>Goa</option>
+						<option>Tripura</option>
+						<option>Jharkand</option>
+						<option>Meghalaya</option>
+				</select>
+			</p><br><br>
+
+
+			<p class="p3">Enter Your Mobile Number :</p>
+			<p class="p4">Enter Email Id:</p> 
+			<input class="in1" type="number" placeholder="Enter Your Mob.No" name="" required name="R7"> 
+			<input class="in2" type="email" name="" placeholder="Enter your email Id" required ><br><br>
+
+			<p class="p3">Enter Date Of Birth :</p>
+			<p class="p4">Enter Age :</p> 
+			<input class="in1" type="date" name="" required >
+			<input class="in2" type="number" name=""  placeholder="Enter Age" required><br>
+
+			<p class="p3">Enter Aadhar Number :</p>
+			<input class="in1" type="number" name="" placeholder="Enter Aadhar Number"  name="R8"><br>
+			<label class="lab1">Don't use dash or space in Aadhar Number </label><br><br>
+
+			<div class="radios">
+			<p class="p3">Male<input  type="radio" name="1" ></p>
+			<p class="p3">Female<input type="radio" name="1" ></p>
+			<p class="p3">Not to be Prefer<input  type="radio" name="1" ></p>
+			</div><br><br>
+
+			<label class="lab3">Select Your Course :- </label>
+			<select required class="sel1" >
+					<option>Please Select</option>
+					<option>B-Tech CS</option>
+					<option>B-Tech IT</option>
+					<option>B.E CS</option>
+					<option>B.E IT</option>
+					<option>B.Arch</option>
+					<option>B-Sc IT</option>
+					<option>B-Sc CS</option>
+					<option>M-Tech CS</option>
+					<option>M-Tech IT</option>
+			</select><br><br>
+			
+
+			<div  class="basic">Academic Background</div><br>
+				<p class="p3">12th School Name : </p>
+				<p class="p4">12th Marks in % :</p>
+
+				<input class="in1" type="text" name="" required placeholder="Enter 12th Passed School Name"  name="R9">
+				<input class="in2" type="number" name="" required placeholder="Enter Marks"  name="R10"><br>
+
+				<div class="basic">Profile</div><br>
+				<p class="p3">Upload Photo :</p>
+				<p class="p4">Upload Signature : </p><br>
+				<input class="in3" type="file" name="" required="True" />
+				<input class="in4" type="file" name="" required /><br><br>
+
+				<div class="btns">
+				<button id="Regis-button" class="btn1" name="submit">Submit</button>
+				<button id="CutR" class="btn1" name="Cancel">Cancel</button>
+				</div>
+		</form>
+	</div> 
+
+
+	
+
+	<script>
+
+		document.getElementById('CutR').addEventListener("click",function(){
+			document.getElementById('Registration').style.display='none'
+			document.getElementById('Login').style.display='none'
+			document.getElementById('Main').style.display='block'
+		})
+
+		document.getElementById('CutL').addEventListener("click",function(){
+			document.getElementById('Registration').style.display='none'
+			document.getElementById('Login').style.display='none'
+			document.getElementById('Main').style.display='block'
+		})
+
+
+		 document.getElementById('idddd').addEventListener("click" , function(){
+		 	document.getElementById('Login').style.display='block'
+			document.getElementById('Main').style.display='none'
+		 })
+
+
+		document.getElementById('regiss').addEventListener("click" , function() {
+			document.getElementById('Registration').style.display='block'
+			document.getElementById('Login').style.display='none'
+			document.getElementById('Main').style.display='none'
+		})
+
+		document.getElementById('Login-button').addEventListener("click" , function() {
+			alert("Login Sucessfull");
+			document.getElementById('Registration').style.display='none'
+			document.getElementById('Login').style.display='none'
+			document.getElementById('Main').style.display='block'
+		})
+		
+		
+
+	function ValidationL(){
+			if(document.Lfrm.L1.value=="")
+			{
+				alert("***Fill out Email***");
+				return false;
+			}
+			else if(document.Lfrm.L2.value=="")
+			{
+				alert("***Fill out Application Number***");
+				return false;
+			}
+			else if(document.Lfrm.L2.value.length!=5)
+			{
+				alert("***Application Number should be 5 Digits***");
+				return false;
+			}
+			else if(document.Lfrm.L3.value=="")
+			{
+				alert("Fill out Password ");
+				return false;
+			}
+			else if(document.Lfrm.L3.value.length<6 || document.Lfrm.L3.length>12)
+			{
+				alert("Password should be  6-12 character long");
+				return false;
+			}
+			else
+			{
+				return true;
+
+			}
+		}
+		
+		function ValidationR(){
+			if(document.Rfrm.R1.value=="")
+			{
+				alert("***Fill out Name***");
+				return false;
+			}
+			else if(document.Rfrm.R2.value=="")
+			{
+				alert("***Fill out Father's Name***");
+				return false;
+			}
+			else if(document.Rfrm.R3.value=="")
+			{
+				alert("***Fill out Mother's Name***");
+				return false;
+			}
+			else if(document.Rfrm.R4.value=="")
+			{
+				alert("***Fill out Address***");
+				return false;
+			}
+			else if(document.Rfrm.R5.value=="")
+			{
+				alert("***Fill out City***");
+				return false;
+			}
+			else if(document.Rfrm.R6.value=="")
+			{
+				alert("***Fill out PinCode***");
+				return false;
+			}
+			else if(document.Rfrm.R6.value.length!=6)
+			{
+				alert("***City PinCode Should be of 6 Digits***");
+				return false;
+			}
+			else if(document.Rfrm.R7.value=="")
+			{
+				alert("***Fill out Mobile Number***");
+				return false;
+			}
+			else if(document.Rfrm.R7.value.length!=10)
+			{
+				alert("***Mobile NUmber Should be of 10 Digits ***");
+				return false;
+			}
+
+			else if(document.Rfrm.R8.value=="")
+			{
+				alert("Fill out Aadhar Number ");
+				return false;
+			}
+			else if(document.Rfrm.R8.value.length!=12)
+			{
+				alert("Aadhar Number Should be of 12 Digits");
+				return false;
+			}
+			else
+			{
+				return true;
+				alert("Registration Sucessfull")
+					var no = Math.random()*100000;
+					var decimal = parseInt(no)
+					alert(" Your Application Number : " + decimal);
+					document.getElementById('Registration').style.display='none'
+					document.getElementById('Login').style.display='none'
+					document.getElementById('Main').style.display='block'
+			}
+		 }
+
+		 // function callingR(){
+		// 			alert("Registration Sucessfull")
+		// 			var no = Math.random()*100000;
+		// 			var decimal = parseInt(no)
+		// 			alert(" Your Application Number : " + decimal);
+		// 			document.getElementById('Registration').style.display='none'
+		// 			document.getElementById('Login').style.display='none'
+		// 			document.getElementById('Main').style.display='block'
+				
+		// 		}
+			
+		
+		
+		
+		
+	</script>
+
+	
+</body>
+</html>
