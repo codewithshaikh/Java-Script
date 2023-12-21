@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Countdown Timer</title>
+
+
+	<style type="text/css">
+
+		body{
+			margin: 0px;
+			padding: 0px;
+			box-sizing: border-box;
+			background-color:#00ECB9;;
+		}
+
+		h3{
+			color: black;
+			font-size: 55px;
+			text-align: center;
+			font-weight: bold;
+		}
+
+		#main{
+			width: 610px;
+			height: 180px;
+			border: 1px solid white;
+			margin: 10px 0px 0px 420px;
+			display: inline-flex;
+			border-radius: 10px;
+		}
+
+		#inside{
+			width:120px ;
+			height: 120px;
+			padding: 10px;
+			border-radius: 3px;
+			background: #00BF96;
+			margin: 20px 0px 0px 10px;
+		}
+
+		.display{
+			width: 90px;
+			height: 60px;
+			border-radius: 3px;
+			background-color: #00816A;
+			margin: 10px 0px 0px 10px;
+			color: white;
+			font-size: 40px;
+			text-align: center;
+		}
+
+		.tag1{
+			color: white;
+			font-size: 35px;
+			font-weight: bold;
+			margin: 0px 0px 0px 0px;
+			text-align: center;
+		}
+
+		#demo{
+			text-align: center;
+			font-size: 35px;
+			color: ghostwhite;
+		}
+
+		#btn{
+			padding: 10px;
+			font-size: 20px;
+			font-weight: bolder;
+			color: white;
+			background-color:#00061a;
+			text-align: center;
+			border-radius: 15px;
+			border:1px solid white;
+			margin: 0px 0px 0px 620px;
+			box-shadow: 5px 2px 4px #000d33 ;
+			animation-name: example;
+			animation-duration: 2s;
+  			animation-iteration-count: infinite;.
+  			cursor: pointer;
+		}
+
+		#btn:hover{
+			font-size: 22px;
+			background-color: #000d33;
+			border: none;
+			animation: none;
+		}
+
+		@keyframes example {
+ 	 	from {background-color:#004d99; color:white;}
+  		to {background-color:#000d1a; color:white}
+		}
+
+
+
+	</style>
+</head>
+<body>
+
+	<h3>Countdown Timer</h3>
+
+	<div id="main">
+		<div id="inside" class="c1">
+			<div id="Days" class="display"></div>
+			<p id="num1" class="tag1">Days</p>
+		</div>
+
+		<div id="inside" class="c">
+			<div id="Hours" class="display"></div>
+			<p id="num2" class="tag1">Hours</p>
+		</div>
+
+		<div id="inside" class="c3">
+			<div id="Minutes" class="display"></div>
+			<p id="num3" class="tag1">Minutes</p>
+		</div>
+
+		<div id="inside" class="c4">
+			<div id="Seconds" class="display"></div>
+			<p id="num4" class="tag1">Seconds</p>
+		</div>
+
+	</div>
+
+	<h3 id="demo"></h3>
+	
+	<button id="btn" onclick="Start()">Start Countdown</button>
+
+
+	<script type="text/javascript">
+		document.getElementById("Days").innerHTML ='00';
+		document.getElementById("Hours").innerHTML ='00';
+		document.getElementById("Minutes").innerHTML ='00' ; 
+		document.getElementById("Seconds").innerHTML = '00';
+
+		function Start()
+		{
+			alert(" CountDown Date is 31 December 2028 15:37:25")
+			// var cYear = parseInt(prompt("Enter Year "));
+			// var cMonth = prompt("Enter Month Name ");
+			// var cDay = parseInt(prompt("Enter day"));
+			// var cTime = parseInt(prompt("Enter Time in format hr:min:sec"));
+
+			// var Format = cMonth + cDay + ", " + cYear + cTime ;
+			var deadline = new Date("dec 31, 2028 15:37:25")
+			var x = setInterval(function() {
+
+			var now = new Date().getTime();
+			var t = deadline - now;
+			var days = Math.floor(t / (1000 * 60 * 60 * 24));
+			var hours = Math.floor((t%(1000 * 60 * 60 * 24))/(1000 * 60 * 60));
+			var minutes = Math.floor((t % (1000 * 60 * 60)) / (1000 * 60));
+			var seconds = Math.floor((t % (1000 * 60)) / 1000);
+			document.getElementById("Days").innerHTML =days ;
+			document.getElementById("Hours").innerHTML =hours;
+			document.getElementById("Minutes").innerHTML = minutes;
+			document.getElementById("Seconds").innerHTML =seconds;
+			if (t < 0) {
+			    clearInterval(x);
+			    document.getElementById("demo").innerHTML = "TIME UP";
+			    document.getElementById("Days").innerHTML ='0';
+			    document.getElementById("Hours").innerHTML ='0';
+			    document.getElementById("Minutes").innerHTML ='0' ;
+			    document.getElementById("Seconds").innerHTML = '0'; }
+			}, 1000);
+
+
+			// var CountDown = cMonth + cDay + " , " + cYear + cTime ;
+			// var CountDownDate = new Date(CountDown).getTime();
+			// // console.log(CountDownDate);
+ 
+			// var x = setInterval(function() 
+			// {
+			// 	var CurrentDate = new Date().getTime();
+			// 	// console.log(CurrentDate);
+
+			// 	var distance = CountDownDate - CurrentDate ;
+			// 	// console.log(distance)
+
+			// 	var days = Math.floor(distance/(1000 * 60 * 60 * 24));  
+			// 	console.log(days)
+			// 	//total number of seconds in a day is 60 * 60 * 24
+			// 	// to get the milliseconds, multiply it by 1000
+
+				
+			// 	var hours = Math.floor((distance%(1000 * 60 * 60 * 24))/(1000 * 60 * 60));
+			// 	var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+			// 	var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+			// 	document.getElementById("Days").innerHTML = days;
+			// 	document.getElementById("Hours").innerHTML = hours ;
+			// 	document.getElementById("Minutes").innerHTML = minutes ;
+			// 	document.getElementById("Seconds").innerHTML = seconds ;
+
+			// 	if (distance < 0) 
+			// 	{
+			// 		clearInterval(x);
+			// 		document.getElementById("demo").innerHTML = "EXPIRED / TIME UP";
+			// 		document.getElementById("Days").innerHTML ='00';
+			//         document.getElementById("Hours").innerHTML ='00';
+			//         document.getElementById("Minutes").innerHTML ='00' ; 
+			//         document.getElementById("Seconds").innerHTML = '00';
+			// 	}
+
+			// },1000)
+		}
+
+	</script>
+
+</body>
+</html>

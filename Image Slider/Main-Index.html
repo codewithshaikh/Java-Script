@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>My Slider</title>
+    <link rel="stylesheet" type="text/css" href="Styles.css">
+</head>
+<body>
+    <div class="slidercontainer">
+        <div class="showSlide fade">
+            <img src="images/img1.jpg"/>
+            <div class="content">Slide 1 </div>
+        </div>
+        <div class="showSlide fade">
+            <img src="images/img2.jpg"/>
+            <div class="content">Slide 2 </div>
+        </div>
+
+        <div class="showSlide fade">
+            <img src="images/img3.jpg"/>
+            <div class="content">Slide 3 </div>
+        </div>
+        <div class="showSlide fade">
+            <img src="images/img4.jpg"/>
+            <div class="content">Slide 4 </div>
+        </div>
+        <!-- Navigation arrows -->
+        <a class="left" onclick="nextSlide(-1)"><</a>
+        <a class="right" onclick="nextSlide(1)">></a>
+    </div>
+
+    <script src="program.js"></script>
+
+</body>
+</html>
