@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Admin Panel</title>
+
+	<!-- Favicon -->
+	<link rel="icon" type="image/png" href="images/logo.jpg" >
+    
+    <!----======== CSS ======== -->
+    <link rel="stylesheet" href="style.css">
+     
+    <!-- Bootstrap Icon Link -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+    <!-- Chart Js CDN Link -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"> </script>
+
+</head>
+<body>
+
+	<nav>
+		<div class="logos">
+			<i class="bi bi-code-slash fonts"></i>
+			<span class="logo_name"> Admin Panel</span>
+		</div>
+
+		<div class="menu-items">
+			<ul class="ul">
+				<li id="menu-items-default">
+					<a href="#" class="link-active" title="Dashboard">
+		            	<i class="bi bi-house-door fonts"></i>
+		            	<span class="link-name"> Dashboard</span>
+		            </a>
+		       	</li>
+
+		      	<li id="menu-items1" class="menu-li">
+					<a href="#" class="link-active" title="Dashboard">
+			            <i class="bi bi-journal-text fonts"></i>
+			            <span class="link-name" > Contents</span>
+		          	</a>
+		      	</li>
+
+		      	<li id="menu-items2" class="menu-li">
+					<a href="#" class="link-active" title="Dashboard">
+			            <i class="bi bi-card-list fonts"></i>
+			            <span class="link-name" > Category</span>
+		          	</a>
+		      	</li>
+
+		      	<li id="menu-items3" class="menu-li">
+					<a href="#" class="link-active" title="Dashboard">
+			            <i class="bi bi-bar-chart-fill"></i>
+			            <span class="link-name" >Charts</span>
+		          	</a>
+		      	</li>
+
+		      	<li id="menu-items4" class="menu-li">
+					<a href="#" class="link-active" title="Dashboard">
+			            <i class="bi bi-person-circle fonts"></i>
+			            <span class="link-name"> Profile</span>
+		          	</a>
+		      	</li>
+
+		      	<li  id="menu-items5" class="menu-li">
+					<a href="#" class="link-active" title="Dashboard">
+			            <i class="bi bi-gear fonts"></i>
+						<span class="link-name"> Settings</span>
+		          	</a>
+		      	</li>
+
+		      	<li  id="menu-items6" class="menu-li">
+					<a href="#" class="link-active" title="Dashboard">
+			            <i class="bi bi-box-arrow-in-right fonts"></i>
+						<span class="link-name"> Logout</span>
+		          	</a>
+		      	</li>
+			</ul>
+		</div>
+	</nav>
+
+
+	<section class="dashboard">
+		<div class="top">
+			<img src="images/hamburger.jpg" id="toggle" class="toggle change">
+
+			<div class="search-box">
+                <i class="bi bi-search"></i>
+                <input type="text" placeholder="Search here...">
+            </div>
+            
+            <img src="images/logo.jpg" alt="">
+		</div>
+
+
+
+		<div class="dash" id="dash">
+			<div class="box-1">
+				<h2>DashBoard</h2>
+			</div>
+
+			<div class="box-2">
+
+				<div class="users box-21">
+					<i class="bi bi-people-fill"></i>
+					<span class="text">Total Users</span>
+					<span class="num">8,267</span>
+				</div>
+
+				<div class="cart box-21">
+					<i class="bi bi-cart-fill"></i>
+					<span class="text">Total Orders</span>
+					<span class="num">200,521</span>
+				</div>
+
+				<div class="sell box-21">
+					<i class="bi bi-bag-fill"></i>
+					<span class="text">Products Sell</span>
+					<span class="num">215,542</span>
+				</div>
+
+				<div class="dollar box-21">
+					<i class="bi bi-currency-dollar"></i>
+					<span class="text">Income</span>
+					<span class="num">$677.54</span>
+				</div>
+			</div>
+
+			<div class="box-3">
+				<div class="inner-1">
+					<h3>Recent Orders Details</h3>
+					<button class="view-all">View All</button>
+				</div>
+
+				<div class="inner-2">
+					<div class="row-main">
+						<span >Customer-Name</span>
+						<span >P-Name</span>
+						<span >Price</span>
+						<span >Payment</span>
+						<span >Status</span>
+						<span>Change</span>
+					</div>
+
+					<div class="row">
+						<span class="customer-name">Ayush Sharma</span>
+						<span class="name">Refrigerator</span>
+						<span class="price">$1500</span>
+						<span class="Payment  Paid">Paid</span>
+						<span class="status D">Delivered</span>
+						<button class="change color">Change</button>
+					</div>
+
+					<div class="row">
+						<span class="customer-name">Ayush Sharma</span>
+						<span class="name">Refrigerator</span>
+						<span class="price">$1500</span>
+						<span class="Payment Due">Due</span>
+						<span class="status P">Pending</span>
+						<button class="change color">Change</button>
+					</div>
+
+					<div class="row">
+						<span class="customer-name">Ayush Sharma</span>
+						<span class="name">Refrigerator</span>
+						<span class="price">$1500</span>
+						<span class="Payment Paid">Paid</span>
+						<span class="status R">Return</span>
+						<button class="change color">Change</button>
+					</div>
+
+					<div class="row">
+						<span class="customer-name">Ayush Sharma</span>
+						<span class="name">Refrigerator</span>
+						<span class="price">$1500</span>
+						<span class="Payment Due">due</span>
+						<span class="status IP">In Progress</span>
+						<button class="change color">Change</button>
+					</div>
+
+					<div class="row">
+						<span class="customer-name">Ayush Sharma</span>
+						<span class="name">Refrigerator</span>
+						<span class="price">$1500</span>
+						<span class="Payment Paid">Paid</span>
+						<span class="status D">Delivered</span>
+						<button class="change color">Change</button>
+					</div>
+
+					<div class="row">
+						<span class="customer-name">Ayush Sharma</span>
+						<span class="name">Refrigerator</span>
+						<span class="price">$1500</span>
+						<span class="Payment Paid">Paid</span>
+						<span class="status D">Delivered</span>
+						<button class="change color">Change</button>
+					</div>
+
+					<div class="row">
+						<span class="customer-name">Ayush Sharma</span>
+						<span class="name">Refrigerator</span>
+						<span class="price">$1500</span>
+						<span class="Payment Due">Due</span>
+						<span class="status R">Return</span>
+						<button class="change color">Change</button>
+					</div>
+
+					<div class="row">
+						<span class="customer-name">Ayush Sharma</span>
+						<span class="name">Refrigerator</span>
+						<span class="price">$1500</span>
+						<span class="Payment Paid">Paid</span>
+						<span class="status D">Delivered</span>
+						<button class="change color">Change</button>
+					</div>
+
+					<div class="row">
+						<span class="customer-name">Ayush Sharma</span>
+						<span class="name">Refrigerator</span>
+						<span class="price">$1500</span>
+						<span class="Payment Paid">Paid</span>
+						<span class="status P">pending</span>
+						<button class="change color">Change</button>
+					</div>
+
+					<div class="row">
+						<span class="customer-name">Ayush Sharma</span>
+						<span class="name">Refrigerator</span>
+						<span class="price">$1500</span>
+						<span class="Payment Due">Due</span>
+						<span class="status IP">In progress</span>
+						<button class="change color">Change</button>
+					</div>
+
+					<div class="row">
+						<span class="customer-name">Ayush Sharma</span>
+						<span class="name">Refrigerator</span>
+						<span class="price">$1500</span>
+						<span class="Payment Due">Due</span>
+						<span class="status P">Pending</span>
+						<button class="change color">Change</button>
+					</div>
+
+					<div class="row">
+						<span class="customer-name">Ayush Sharma</span>
+						<span class="name">Refrigerator</span>
+						<span class="price">$1500</span>
+						<span class="Payment Paid">Paid</span>
+						<span class="status D">Delivered</span>
+						<button class="change color">Change</button>
+					</div>
+
+					<div class="row">
+						<span class="customer-name">Ayush Sharma</span>
+						<span class="name">Refrigerator</span>
+						<span class="price">$1500</span>
+						<span class="Payment Paid">Paid</span>
+						<span class="status IP">In Progress</span>
+						<button class="change color">Change</button>
+					</div>
+
+					<div class="row">
+						<span class="customer-name">Ayush Sharma</span>
+						<span class="name">Refrigerator</span>
+						<span class="price">$1500</span>
+						<span class="Payment Due">Due</span>
+						<span class="status D">Delivered</span>
+						<button class="change color">Change</button>
+					</div>
+
+					<div class="row">
+						<span class="customer-name">Ayush Sharma</span>
+						<span class="name">Refrigerator</span>
+						<span class="price">$1500</span>
+						<span class="Payment Paid">Paid</span>
+						<span class="status IP">In Progress</span>
+						<button class="change color">Change</button>
+					</div>
+
+					<div class="row">
+						<span class="customer-name">Ayush Sharma</span>
+						<span class="name">Refrigerator</span>
+						<span class="price">$1500</span>
+						<span class="Payment Due">Due</span>
+						<span class="status D">Delivered</span>
+						<button class="change color">Change</button>
+					</div>
+
+					<div class="row">
+						<span class="customer-name">Ayush Sharma</span>
+						<span class="name">Refrigerator</span>
+						<span class="price">$1500</span>
+						<span class="Payment Paid">Paid</span>
+						<span class="status D">Delivered</span>
+						<button class="change color">Change</button>
+					</div>
+
+					<div class="row">
+						<span class="customer-name">Ayush Sharma</span>
+						<span class="name">Refrigerator</span>
+						<span class="price">$1500</span>
+						<span class="Payment Paid">Paid</span>
+						<span class="status R">Return</span>
+						<button class="change color">Change</button>
+					</div>
+				</div>
+			</div>			
+		</div>
+
+		<div class="contents" id="contents">
+			<div class="box-1">
+				<h2>Contents</h2>
+			</div>
+			<div class="box-3">
+				<div class="inner-1">
+					<h3>Product Details</h3>
+					<button class="view-all">View All</button>
+				</div>
+
+				<div class="inner-2">
+					<table width="100%">
+						<thead>
+							<tr>
+								<th>Product Name</th>
+								<th>Price </th>
+								<th>Products Remain</th>
+								<th>Product Ordered</th>
+								<th>Order Status</th>
+								<th>Order button</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>Refrigerator</td>
+								<td>$1500</td>
+								<td>10</td>
+								<td>20</td>
+								<td>Recieved</td>
+								<td><button>Order Now</button></td>
+							</tr>
+
+							<tr>
+								<td>Refrigerator</td>
+								<td>$1500</td>
+								<td>10</td>
+								<td>20</td>
+								<td>Recieved</td>
+								<td><button>Order Now</button></td>
+							</tr>
+
+							<tr>
+								<td>Refrigerator</td>
+								<td>$1500</td>
+								<td>10</td>
+								<td>20</td>
+								<td>Recieved</td>
+								<td><button>Order Now</button></td>
+							</tr>
+
+							<tr>
+								<td>Refrigerator</td>
+								<td>$1500</td>
+								<td>10</td>
+								<td>20</td>
+								<td>Recieved</td>
+								<td><button>Order Now</button></td>
+							</tr>
+							<tr>
+								<td>Refrigerator</td>
+								<td>$1500</td>
+								<td>10</td>
+								<td>20</td>
+								<td>Recieved</td>
+								<td><button>Order Now</button></td>
+							</tr>
+
+							<tr>
+								<td>Refrigerator</td>
+								<td>$1500</td>
+								<td>10</td>
+								<td>20</td>
+								<td>Recieved</td>
+								<td><button>Order Now</button></td>
+							</tr>
+							<tr>
+								<td>Refrigerator</td>
+								<td>$1500</td>
+								<td>10</td>
+								<td>20</td>
+								<td>Recieved</td>
+								<td><button>Order Now</button></td>
+							</tr>
+							<tr>
+								<td>Refrigerator</td>
+								<td>$1500</td>
+								<td>10</td>
+								<td>20</td>
+								<td>Recieved</td>
+								<td><button>Order Now</button></td>
+							</tr>
+
+							<tr>
+								<td>Refrigerator</td>
+								<td>$1500</td>
+								<td>10</td>
+								<td>20</td>
+								<td>Recieved</td>
+								<td><button>Order Now</button></td>
+							</tr>
+
+							<tr>
+								<td>Refrigerator</td>
+								<td>$1500</td>
+								<td>10</td>
+								<td>20</td>
+								<td>Recieved</td>
+								<td><button>Order Now</button></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+
+		<div class="category" id="category">
+		</div>
+
+		<div class="charts" id="charts">
+			<div class="box-1">
+				<h2>Sales and Profit Graphs</h2>
+			</div>
+			<canvas id="myChart1" style="width:100%; max-width:98%" class="myChart1"></canvas>
+			<div class="d-flex-charts">
+				<canvas id="myChart2" style="width:100%;max-width:50%"></canvas>
+				<canvas id="myChart3" style="width:100%;max-width:50%"></canvas>
+			</div>
+		</div>
+	</section>
+
+
+
+	<script src="Script.js"></script>
+	<script src="charts.js"></script>
+
+</body>
+</html>
