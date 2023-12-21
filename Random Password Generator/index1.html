@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>PassWord Generator</title>
+	<link rel="stylesheet" type="text/css" href="style1.css">
+
+
+		<script type="text/javascript">
+			const keys={
+				uppercase : "ABCDEFGHIJKLMNOPQRSTUWXYZ",
+				lowercase : "abcdefghijklmnopqrstuvwxyz",
+				number : "0123456789",
+				symbol : "!@#$%^&*()+=*-<,>?/"
+			}
+
+			const getKey=[
+				function uppercase() {
+			      return keys.uppercase[Math.floor(Math.random() * keys.uppercase.length)];
+			    },
+			    function lowercase() {
+			      return keys.lowercase[Math.floor(Math.random() * keys.lowercase.length)];
+			    },
+			    function number() {
+			      return keys.number[Math.floor(Math.random() * keys.number.length)];
+			    },
+			    function symbol() {
+			      return keys.symbol[Math.floor(Math.random() * keys.symbol.length)];
+			  }
+			]
+
+			function GenPass()
+			{
+				// let passwordbox = document.getElementById("password");
+				let length = document.getElementById("length").value ;
+				let number = document.getElementById("number").checked ;
+				let symbol = document.getElementById("symbol").checked ;
+				let uppercase = document.getElementById("uppercase").checked ; 
+				let lowercase = document.getElementById("lowercase").checked ;
+
+
+
+				if(!length)
+				{
+					alert("Please Enter Length");
+					return ;
+				}
+
+				if(!symbol && !number && !uppercase && !lowercase )
+				{
+					alert("Please Select any CheckBox")
+					return;
+				}
+
+				let passWord=""
+				while(length>passWord.length)
+				{
+					let keyToAdd = getKey[Math.floor(Math.random()*getKey.length)];
+					let isChecked = document.getElementById(keyToAdd.name).checked;
+					if(isChecked)
+					{
+						passWord = passWord+keyToAdd()
+					}
+				}
+
+
+				document.getElementById("password").innerHTML = passWord;
+
+			}
+
+
+			function CopyPass() {    
+			    const password = document.getElementById("password").innerText;
+			    if (!password) { return; }
+			    navigator.clipboard.writeText(password);
+			    alert('Password copied to clipboard');
+			  }
+
+			
+
+
+		</script>
+	<script src="https://kit.fontawesome.com/4e07701ab0.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+	<div id="box">
+		<h2>Random Password Generator</h2>
+		<div class="passwordbox">
+			<p id="password">
+			<i class="far fa-copy" onclick="CopyPass()"></i>
+		</div>
+
+		<div class="option-container">
+
+			<div id="options">
+				<p>Total Length:</p>
+				<input type="number" name="" min="4" max="15" id="length" >
+			</div>
+
+			<div id="options">
+				<p>Include Symbol :</p>
+				<input type="checkbox" name="" min="4" max="15" id="symbol" >
+			</div>
+
+			<div id="options">
+				<p>Include Numbers</p>
+				<input type="checkbox" name="" min="4" max="15" id="number" >
+			</div>
+
+			<div id="options">
+				<p>Include UpperCase:</p>
+				<input type="checkbox" name="" min="4" max="15" id="uppercase" >
+			</div>
+
+			<div id="options">
+				<p>Include lowerCase:</p>
+				<input type="checkbox" name="" min="4" max="15" id="lowercase" >
+			</div>
+
+		</div>
+
+		<div id="buttons">
+			<button id="btn" class="but1" onclick="GenPass()">Generate </button>
+			<button id="btn" class="but2" onclick="CopyPass()">Copy</button>
+		</div>
+	</div>
+
+</body>
+</html>
